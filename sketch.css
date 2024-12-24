@@ -1,0 +1,19 @@
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    display: inline-block;
+    width: calc(100%/4);
+    box-sizing: border-box;
+    border: solid 1px black;
+    border-radius: 2px;
+    height: 75px;
+}
+
+.selected {
+    background-color: #333;
+}
