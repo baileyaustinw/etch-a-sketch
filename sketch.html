@@ -6,7 +6,16 @@
         <title>Etch-A-Sketch</title>
     </head>
     <body>
-        <div id="container"></div>
+        <!-- Container for button and grid-->
+        <div id="gridContainer">
+            <!-- Button to reset and resize grid-->
+            <button id="resetButton" onclick="resetGrid()">Reset Grid</button>
+            <!-- Container holding the grid-->
+            <div id="boxContainer">
+                <!-- Actual grid -->
+                <div id="container"></div>
+            </div>
+        </div>
     </body>
     <script src="sketch.js"></script>
 </html>
