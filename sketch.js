@@ -6,7 +6,28 @@ generateGrid(16);
 
 // Function to add class to change background color of box that is hovered over
 function changeColor() {
-    this.classList.add('selected');
+    // Generate random RGB values
+    let randomRValue = Math.random() * (255 - 0) + 0;
+    let randomGValue = Math.random() * (255 - 0) + 0;
+    let randomBValue = Math.random() * (255 - 0) + 0;
+
+    // if this box hasn't already been hovered over, 
+    // set a new random backgorund color,
+    // set opacity to be 0.1,
+    // and add class "selected"
+    if (!this.classList.contains('selected')) {
+        this.style.backgroundColor = `rgb(${randomRValue}, ${randomGValue}, ${randomBValue})`;
+        this.style.opacity = 0.1;
+        this.classList.add('selected');
+    } else {
+        // increase opacity by 0.1 each time box is hovered over up to a maximum opacity of 1
+        let opacity = parseFloat(this.style.opacity) || 0;
+        console.log(opacity);
+        if (opacity < 1) {
+            opacity += .1;
+            this.style.opacity = opacity;
+        }
+    }
 }
 
 // Function to reset and resize grid based off of user input
